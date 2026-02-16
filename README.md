@@ -1,19 +1,12 @@
 # 2D-Puzzle-Game_REPO
-Game Design Class 2D Game Group Project Repository
 
+SVA Game Design Fundamentals Class 
 
+2D Game Group Project Repository
 
-Meowdy teammates!
+**Hello**
 
-
-wowowowowowowowowow
-
-
-
-Hello There
-Meowdy teammates!
-
-
-
-Where's the conflict 
-
+# Collaborators:
+* Donghoon Yi
+* Fnu Mahira
+* Natalie Tobias
