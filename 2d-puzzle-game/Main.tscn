@@ -6,7 +6,7 @@
 [node name="Node2D" type="Node2D" unique_id=1560164826]
 
 [node name="Node2D" parent="." unique_id=1663965700 instance=ExtResource("1_uu6xs")]
-position = Vector2(-36, -9)
+position = Vector2(39, -62)
 
 [node name="hatgoomba" parent="." unique_id=561440530 instance=ExtResource("2_r0du0")]
 position = Vector2(657.0001, 538)
