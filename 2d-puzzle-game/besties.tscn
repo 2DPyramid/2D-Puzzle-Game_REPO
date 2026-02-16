@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://xq85r17vk5st"]
+
+[ext_resource type="Texture2D" uid="uid://drrt5g7slul1f" path="res://da middle kitten who dwink da milk.jpg" id="1_5r8yf"]
+[ext_resource type="Texture2D" uid="uid://d1fa1dd2wt5xm" path="res://batfish.webp" id="2_f6g0g"]
+
+[node name="Node2D" type="Node2D" unique_id=1663965700]
+
+[node name="DaMiddleKittenWhoDwinkDaMilk" type="Sprite2D" parent="." unique_id=1597115156]
+position = Vector2(373, 289)
+scale = Vector2(0.11838623, 0.118386246)
+texture = ExtResource("1_5r8yf")
+
+[node name="Batfish" type="Sprite2D" parent="." unique_id=4145506]
+position = Vector2(775, 329)
+scale = Vector2(0.45495495, 0.45495495)
+texture = ExtResource("2_f6g0g")

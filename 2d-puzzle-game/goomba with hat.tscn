@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dic7tnm7dtlrk"]
+
+[ext_resource type="Texture2D" uid="uid://b2gsah8heq3sg" path="res://GOOMBA.png" id="1_2t2dw"]
+
+[node name="hatgoomba" type="Sprite2D" unique_id=561440530]
+position = Vector2(537, 392.00006)
+scale = Vector2(0.6751498, 0.1733533)
+texture = ExtResource("1_2t2dw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=333138161]
+anchors_preset = -1
+anchor_right = 0.85400003
+anchor_bottom = 0.273
+offset_left = -263.6842
+offset_top = -550.08185
+offset_right = -441.69568
+offset_bottom = -434.6156
+color = Color(0.3764706, 0.8784314, 0.023529412, 1)
