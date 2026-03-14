@@ -6,17 +6,15 @@ SVA Game Design Fundamentals Class
 
 **Hello**
 
-# Collaborators:
+## Collaborators
 * Donghoon Yi
 * Fnu Mahira
 * Natalie Tobias
 
-
-silly game
-more focus on the trivia than the reacting guy
-the reacting guy has 4 different faces
-the questions are true or false to keep the number of answers to 2
-single player
-point system
-Color code the questions based on difficulty? green orange red
-the character reaction is based on the score - above a certain number is happy - in the middle is neutral - under a certain score is upset
+## Details
+* A single-player True or False Trivia game where a character makes a funny and often absurd reactions with 4 different faces.
+* Point System with leaderboard
+* Questions are color coded based on difficulty
+* The character reactions and emotions are based on the score where high scores makes it happy and low score makes it upset.
+* Dialogue between each questions to show the reactions of the character.
+* The existence of the character's reactions and emotional images adds to the Aesthetic experience of the game.
