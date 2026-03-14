@@ -6,7 +6,7 @@ SVA Game Design Fundamentals Class
 
 **Hello**
 
-# Collaborators
+## Collaborators
 * Donghoon Yi
 * Fnu Mahira
 * Natalie Tobias
