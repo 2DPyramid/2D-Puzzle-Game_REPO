@@ -11,7 +11,7 @@ SVA Game Design Fundamentals Class
 * Fnu Mahira
 * Natalie Tobias
 
-##Details
+#Details
 * A single-player True or False Trivia game where a character makes a funny and often absurd reactions with 4 different faces.
 * Point System with leaderboard
 * Questions are color coded based on difficulty
