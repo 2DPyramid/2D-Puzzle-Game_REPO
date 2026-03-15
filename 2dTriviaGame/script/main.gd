@@ -6,8 +6,10 @@ extends Control
 #get the button texts and question text from the scene
 
 var current = 0 #start at first question
+var correctAns = 0.0
 
 func _ready():
+	print(str(Global.data.size()) + " Questions Total")
 	update_ui()
 
 
@@ -24,9 +26,9 @@ func update_ui():
 	else:
 		#out of questions
 		question.text = "Out of Questions"
+		print("Percent Correct: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
 		ans_1.hide()
 		ans_2.hide()
-		
 
 
 
@@ -34,9 +36,8 @@ func _on_button_pressed(index: int) -> void:
 	var correct = Global.data[current]["correct"]
 	if index == correct:
 		print("Question " + str(current+1) + ": " + "Correct!")
+		correctAns+=1
 	else:
 		print("Question " + str(current+1) + ": " + "Wrong!")
-		
 	current += 1	
 	update_ui()
-	
