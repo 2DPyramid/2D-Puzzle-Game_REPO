@@ -291,19 +291,17 @@ var data = [
 		"correct": 0
 	},
 	{ 	
-		"question": "What makes a Fish a Fish?",
-		"options": ["Aquatic animal
-		 with a tail, scales, 
-		and gills", "Fish is not a precise
-		scientific term, but a 
-		colliquial one. Therefore, 
-		anything considered a 
-		fish by the general 
-		population is a fish."],
-		"correct": 1
+		"question": "What is a Fish?",
+		"options": ["A paraphyletic term, a group 
+		of animals who look 
+		and behave similarly.", 
+		"A phylogenetic classification 
+		including all the descendents 
+		of a common ancestor."],
+		"correct": 0
 	},
 	{ 	
-		"question": "spaghetti and meatballs as a dish
+		"question": "Spaghetti and meatballs as a dish
 		 was created in",
 		"options": ["Little Italy", "Southern Italy"],
 		"correct": 0
@@ -327,9 +325,7 @@ var data = [
 		"question": "Arapaima can survive in waters with lower
 		 oxygen levels than most fish can tolerate because...",
 		"options": ["Arapaima have specialized
-		 glands that regulate oxygen usage
-		 to be more efficient when there is
-		 less oxygen in the environment", "Arapaima can use their
+		 glands that regulate oxygen usage.", "Arapaima can use their
 		 swim bladder like a lung 
 		and will surface for air"],
 		"correct": 1
@@ -347,9 +343,7 @@ var data = [
 		in his novel Twenty Thousand
 		Leagues Under the Sea and do
 		not really exist", "are toxic environments for many 
-		organisms, and are often seen littered 
-		with mummified fish, crabs,
-		 and other organisms"],
+		organisms."],
 		"correct": 1
 	},
 	{ 	
@@ -371,43 +365,39 @@ var data = [
 		in MS Paint)?",
 		"options": ["A whoooooooole lot! :)", "Not at all (wrong answer)"],
 		"correct": 0
-	},
-	{	
-		"question": "Will my (the slightly unnerving disembodied
-		 face drawn in MS Paint) dad (Mr. the slightly unnerving 
-		disembodied face drawn in MS Paint) ever return with the milk?",
-		"options": ["it's me, my child, 
-		I have finally returned 
-		(you are larping as my dad)", "You do not have a dad,
-		 you are a slightly unnerving 
-		disembodied face drawn in MS Paint and 
-		those don't have dads 
-		(this is technically true but please
-		 pick the other option
-		 PLEASE I WILL GIVE YOU A POINT!
-		 WE CAN PLAY CATCH!!!!)"],
-		"correct": 0
-	},
-	{	
-		"question": "What did I 
-		(the slightly unnerving disembodied face
-		 drawn in MS Paint) have for breakfast?",
-		"options": ["JPGs of waffles", "Real waffles like
-		 a real normal person"],
-		"correct": 0
-	},
-	{	
-		"question": "Will you....ouhhhh ummm.......
-		willyougototheschooldancewithme 
-		(the slightly unnerving disembodied face drawn in MS Paint)?",
-		"options": ["Yes! Of course!!
-		 This is a dream come true!!!!", "What did you just say?????"],
-		"correct": 0
-	},
-	 
-	
-	
-	
+	}
+	#, {	
+		#"question": "Will my (the slightly unnerving disembodied
+		 #face drawn in MS Paint) dad (Mr. the slightly unnerving 
+		#disembodied face drawn in MS Paint) ever return with the milk?",
+		#"options": ["it's me, my child, 
+		#I have finally returned 
+		#(you are larping as my dad)", "You do not have a dad,
+		 #you are a slightly unnerving 
+		#disembodied face drawn in MS Paint and 
+		#those don't have dads 
+		#(this is technically true but please
+		 #pick the other option
+		 #PLEASE I WILL GIVE YOU A POINT!
+		 #WE CAN PLAY CATCH!!!!)"],
+		#"correct": 0
+	#},
+	#{	
+		#"question": "What did I 
+		#(the slightly unnerving disembodied face
+		 #drawn in MS Paint) have for breakfast?",
+		#"options": ["JPGs of waffles", "Real waffles like
+		 #a real normal person"],
+		#"correct": 0
+	#},
+	#{	
+		#"question": "Will you..ouhh ummm...
+		#will you go to the school dance with me 
+		#(the slightly unnerving disembodied face drawn in MS Paint)?",
+		#"options": ["Yes! Of course!!
+		 #This is a dream come true!!", "What did you just say??"],
+		#"correct": 0
+	#}
 	
 	#{	"question": "I found a a a WEIRD FREAKING THING(!!!!!!) outside! ...Should I keep it? (?????)",
 		#"options": ["yes", "no"],
