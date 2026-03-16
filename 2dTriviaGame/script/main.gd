@@ -8,6 +8,9 @@ extends Control
 @onready var score_label: Label = $MarginContainer/VBoxContainer/score/score_label
 @onready var color_rect: ColorRect = $ColorRect
 @onready var wrong_reaction: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/wrong_reaction
+@onready var timer_number: Label = $MarginContainer/VBoxContainer/timer/timer_number
+@onready var timer_label: Label = $MarginContainer/VBoxContainer/timer/timer_label
+@export var timer: Timer
 
 #get the button texts and question text from the scene
 
@@ -18,13 +21,14 @@ var reaction_var = 10
 func _ready():
 	print(str(Global.data.size()) + " Questions Total")
 	update_ui()
+	time_left_to_live()
 
 
 
 func update_ui():
 	# .size() tells us max number of questions
-	if current < 30: #30 questions max
-	#if current < Global.data.size(): #for if you want to go through EVERY questions
+	#if current < 30: #30 questions max
+	if current < Global.data.size(): #for if you want to go through EVERY questions
 		var data = Global.data[current] 
 		
 		#updating the texts
@@ -87,3 +91,21 @@ func _on_button_pressed(index: int) -> void:
 	print(reaction_var)
 	current += 1	
 	update_ui()
+
+
+func time_left_to_live():
+	var time_left = timer.time_left
+	var minute = floor(time_left / 60)
+	var second = int(time_left) % 60
+	return [minute, second]
+	
+func _process(delta):
+	timer_label.text = "%02d:%02d" % time_left_to_live()
+	
+func _on_timer_timeout() -> void:
+	question.text = "Out of Time"
+	score_label.text = "Percent Correct: "
+	score.text = str( int((correctAns / current) *100) )  + "%"
+	print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
+	ans_1.hide()
+	ans_2.hide()

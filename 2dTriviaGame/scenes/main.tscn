@@ -43,7 +43,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="Control" type="Control" unique_id=182376782]
+[node name="Control" type="Control" unique_id=182376782 node_paths=PackedStringArray("timer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,6 +51,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0wfyh")
+timer = NodePath("MarginContainer/VBoxContainer/timer/Timer")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1957704364]
 layout_mode = 0
@@ -78,15 +79,28 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 2
 
-[node name="score" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=909003695]
+[node name="timer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=909003695]
 layout_mode = 2
 
-[node name="score_label" type="Label" parent="MarginContainer/VBoxContainer/score" unique_id=1110661543]
+[node name="timer_label" type="Label" parent="MarginContainer/VBoxContainer/timer" unique_id=1110661543]
+layout_mode = 2
+text = "Timer:"
+label_settings = SubResource("LabelSettings_0wfyh")
+
+[node name="Timer" type="Timer" parent="MarginContainer/VBoxContainer/timer" unique_id=1916004089]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="score" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=652813399]
+layout_mode = 2
+
+[node name="score_label" type="Label" parent="MarginContainer/VBoxContainer/score" unique_id=1670117358]
 layout_mode = 2
 text = "Score:"
 label_settings = SubResource("LabelSettings_0wfyh")
 
-[node name="number" type="Label" parent="MarginContainer/VBoxContainer/score" unique_id=1723729477]
+[node name="number" type="Label" parent="MarginContainer/VBoxContainer/score" unique_id=1699546393]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_0wfyh")
@@ -97,14 +111,13 @@ size_flags_vertical = 3
 theme_override_constants/separation = 10
 
 [node name="reaction" parent="MarginContainer/VBoxContainer/question" unique_id=54342535 instance=ExtResource("2_sugp2")]
-position = Vector2(964, 89)
+position = Vector2(956, 33)
 scale = Vector2(0.5, 0.5)
 animation = &"2"
 autoplay = "2"
 
 [node name="wrong_reaction" parent="MarginContainer/VBoxContainer/question" unique_id=1107030189 instance=ExtResource("2_sugp2")]
-visible = false
-position = Vector2(964, 89)
+position = Vector2(964, 25)
 scale = Vector2(0.5, 0.5)
 animation = &"0"
 autoplay = "0"
@@ -120,7 +133,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="answer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=891937224]
-custom_minimum_size = Vector2(0, 300)
+custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_constants/separation = 20
@@ -146,5 +159,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_0wfyh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o5qli")
 text = "Answer 2"
 
+[connection signal="timeout" from="MarginContainer/VBoxContainer/timer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/answer/Button" to="." method="_on_button_pressed" binds= [0]]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/answer/Button2" to="." method="_on_button_pressed" binds= [1]]
