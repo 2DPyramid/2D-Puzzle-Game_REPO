@@ -13,6 +13,7 @@ extends Control
 
 var current = 0 #start at first question
 var correctAns = 0.0
+var reaction_var = 10
 
 func _ready():
 	print(str(Global.data.size()) + " Questions Total")
@@ -22,8 +23,8 @@ func _ready():
 
 func update_ui():
 	# .size() tells us max number of questions
-	#if current < 30: #30 questions max
-	if current < Global.data.size(): #for if you want to go through EVERY questions
+	if current < 30: #30 questions max
+	#if current < Global.data.size(): #for if you want to go through EVERY questions
 		var data = Global.data[current] 
 		
 		#updating the texts
@@ -43,13 +44,15 @@ func update_ui():
 
 func _on_button_pressed(index: int) -> void:
 	
-	if correctAns < 7:
-		reaction.play("1")
-	elif correctAns == 7:
+	if reaction_var == 10:
 		reaction.play("2")
-	elif correctAns > 7 and correctAns < 12:
+	elif reaction_var < 5:
+		reaction.play("0")
+	elif reaction_var >= 5 and reaction_var < 9:
+		reaction.play("1")
+	elif reaction_var > 10 and reaction_var < 15:
 		reaction.play("3")
-	elif correctAns >= 12:
+	elif reaction_var >= 15:
 		reaction.play("4")
 		 
 	#var animation_list = reaction.sprite_frames.get_animation_names()
@@ -64,20 +67,23 @@ func _on_button_pressed(index: int) -> void:
 		print("Question " + str(current+1) + ": " + "Correct!")
 		
 		correctAns+=1
+		reaction_var +=1
 		score.text = str(int(correctAns))
 		#update score
 		color_rect.color = Color.LIGHT_GREEN
 		await get_tree().create_timer(0.2).timeout
 		color_rect.color = Color.WHITE
+		
 	else:
 		print("Question " + str(current+1) + ": " + "Wrong!")
-		
+		reaction_var -=1
 		#disgusted reaction when you get wrong answer
 		color_rect.color = Color.ORANGE_RED
 		wrong_reaction.show()
-		await get_tree().create_timer(0.25).timeout
+		await get_tree().create_timer(0.3).timeout
 		color_rect.color = Color.WHITE
 		wrong_reaction.hide()
 	
+	print(reaction_var)
 	current += 1	
 	update_ui()
