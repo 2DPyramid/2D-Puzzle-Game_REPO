@@ -41,22 +41,22 @@ func update_ui():
 
 func _on_button_pressed(index: int) -> void:
 	
-	#if correctAns < 2:
-		#reaction.play("0")
-	#elif correctAns > 2 and correctAns < 5:
-		#reaction.play("1")
-	#elif correctAns == 5:
-		#reaction.play("2")
-	#elif correctAns > 5 and correctAns < 7:
-		#reaction.play("3")
-	#elif correctAns >= 7:
-		#reaction.play("4")
+	if correctAns < 5:
+		reaction.play("0")
+	elif correctAns >= 5 and correctAns < 10:
+		reaction.play("1")
+	elif correctAns == 10:
+		reaction.play("2")
+	elif correctAns > 10 and correctAns < 15:
+		reaction.play("3")
+	elif correctAns >= 15:
+		reaction.play("4")
 		 
-	var animation_list = reaction.sprite_frames.get_animation_names()
-	var random_index = randi() % animation_list.size()
-	var random_anim = animation_list[random_index]
-	reaction.play(random_anim)
-	##display random reaction sprite
+	#var animation_list = reaction.sprite_frames.get_animation_names()
+	#var random_index = randi() % animation_list.size()
+	#var random_anim = animation_list[random_index]
+	#reaction.play(random_anim)
+	#display random reaction sprite
 	
 	
 	var correct = Global.data[current]["correct"]
