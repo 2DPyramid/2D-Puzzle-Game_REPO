@@ -8,9 +8,9 @@ extends Control
 @onready var score_label: Label = $MarginContainer/VBoxContainer/score/score_label
 @onready var color_rect: ColorRect = $ColorRect
 @onready var wrong_reaction: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/wrong_reaction
-@onready var timer_number: Label = $MarginContainer/VBoxContainer/timer/timer_number
 @onready var timer_label: Label = $MarginContainer/VBoxContainer/timer/timer_label
 @export var timer: Timer
+@onready var critter: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/critter
 
 #get the button texts and question text from the scene
 
@@ -30,6 +30,9 @@ func update_ui():
 	#if current < 30: #30 questions max
 	if current < Global.data.size(): #for if you want to go through EVERY questions
 		var data = Global.data[current] 
+		
+		if data.has("special"):
+			print("special")
 		
 		#updating the texts
 		question.text = data["question"]
@@ -78,17 +81,26 @@ func _on_button_pressed(index: int) -> void:
 		await get_tree().create_timer(0.2).timeout
 		color_rect.color = Color.WHITE
 		
+		if Global.data[current].has("special"):
+			critter.show()
+		
 	else:
 		print("Question " + str(current+1) + ": " + "Wrong!")
 		reaction_var -=1
+		
 		#disgusted reaction when you get wrong answer
 		color_rect.color = Color.ORANGE_RED
 		wrong_reaction.show()
+		reaction.hide()
 		await get_tree().create_timer(0.3).timeout
 		color_rect.color = Color.WHITE
 		wrong_reaction.hide()
+		reaction.show()
+		
 	
-	print(reaction_var)
+	
+	
+	print("Reaction: " + str(reaction_var))
 	current += 1	
 	update_ui()
 
@@ -99,7 +111,7 @@ func time_left_to_live():
 	var second = int(time_left) % 60
 	return [minute, second]
 	
-func _process(delta):
+func _process(_delta):
 	timer_label.text = "%02d:%02d" % time_left_to_live()
 	
 func _on_timer_timeout() -> void:

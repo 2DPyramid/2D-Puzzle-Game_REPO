@@ -43,7 +43,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="Control" type="Control" unique_id=182376782 node_paths=PackedStringArray("timer")]
+[node name="Quiz" type="Control" unique_id=182376782 node_paths=PackedStringArray("timer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -111,12 +111,18 @@ size_flags_vertical = 3
 theme_override_constants/separation = 10
 
 [node name="reaction" parent="MarginContainer/VBoxContainer/question" unique_id=54342535 instance=ExtResource("2_sugp2")]
-position = Vector2(945, 33)
+position = Vector2(939, 33)
 scale = Vector2(0.5, 0.5)
 animation = &"2"
 autoplay = "2"
 
-[node name="wrong_reaction" parent="MarginContainer/VBoxContainer/question" unique_id=1107030189 instance=ExtResource("2_sugp2")]
+[node name="critter" parent="MarginContainer/VBoxContainer/question" unique_id=1107030189 instance=ExtResource("2_sugp2")]
+visible = false
+position = Vector2(816.49927, -71.5)
+scale = Vector2(0.18140243, 0.18140244)
+autoplay = "4"
+
+[node name="wrong_reaction" parent="MarginContainer/VBoxContainer/question" unique_id=560566291 instance=ExtResource("2_sugp2")]
 visible = false
 position = Vector2(945, 30)
 scale = Vector2(0.5, 0.5)
@@ -124,9 +130,8 @@ animation = &"0"
 autoplay = "0"
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/question" unique_id=1968995364]
-custom_minimum_size = Vector2(800, 200)
+custom_minimum_size = Vector2(775, 200)
 layout_mode = 2
-size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Question"
