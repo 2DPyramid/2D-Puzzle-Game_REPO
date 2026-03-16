@@ -6,6 +6,8 @@ extends Control
 @onready var score: Label = $MarginContainer/VBoxContainer/score/number
 @onready var reaction: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/reaction
 @onready var score_label: Label = $MarginContainer/VBoxContainer/score/score_label
+@onready var color_rect: ColorRect = $ColorRect
+@onready var wrong_reaction: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/wrong_reaction
 
 #get the button texts and question text from the scene
 
@@ -20,8 +22,8 @@ func _ready():
 
 func update_ui():
 	# .size() tells us max number of questions
-	if current < 30: #30 questions max
-	#if current < Global.data.size(): #for if you want to go through EVERY questions
+	#if current < 30: #30 questions max
+	if current < Global.data.size(): #for if you want to go through EVERY questions
 		var data = Global.data[current] 
 		
 		#updating the texts
@@ -32,7 +34,7 @@ func update_ui():
 		#out of questions
 		question.text = "Out of Question"
 		score_label.text = "Percent Correct: "
-		score.text = str( int((correctAns / 30) *100) )  + "%"
+		score.text = str( int((correctAns / current) *100) )  + "%"
 		print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
 		ans_1.hide()
 		ans_2.hide()
@@ -41,15 +43,13 @@ func update_ui():
 
 func _on_button_pressed(index: int) -> void:
 	
-	if correctAns < 5:
-		reaction.play("0")
-	elif correctAns >= 5 and correctAns < 10:
+	if correctAns < 7:
 		reaction.play("1")
-	elif correctAns == 10:
+	elif correctAns == 7:
 		reaction.play("2")
-	elif correctAns > 10 and correctAns < 15:
+	elif correctAns > 7 and correctAns < 12:
 		reaction.play("3")
-	elif correctAns >= 15:
+	elif correctAns >= 12:
 		reaction.play("4")
 		 
 	#var animation_list = reaction.sprite_frames.get_animation_names()
@@ -66,8 +66,18 @@ func _on_button_pressed(index: int) -> void:
 		correctAns+=1
 		score.text = str(int(correctAns))
 		#update score
+		color_rect.color = Color.LIGHT_GREEN
+		await get_tree().create_timer(0.2).timeout
+		color_rect.color = Color.WHITE
 	else:
 		print("Question " + str(current+1) + ": " + "Wrong!")
+		
+		#disgusted reaction when you get wrong answer
+		color_rect.color = Color.ORANGE_RED
+		wrong_reaction.show()
+		await get_tree().create_timer(0.25).timeout
+		color_rect.color = Color.WHITE
+		wrong_reaction.hide()
 	
 	current += 1	
 	update_ui()
