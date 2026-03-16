@@ -21,7 +21,7 @@ func _ready():
 func update_ui():
 	# .size() tells us max number of questions
 	if current < 30: #30 questions max
-	#if current < Global.data.size(): #if it is not the last question
+	#if current < Global.data.size(): #for if you want to go through EVERY questions
 		var data = Global.data[current] 
 		
 		#updating the texts
