@@ -1,0 +1,7 @@
+NEED TO DO:
+
+- make trivia list
+- make assets for reacting character
+- code clicking an option triggering a reaction
+- write dialogue for reacting character?
+- 

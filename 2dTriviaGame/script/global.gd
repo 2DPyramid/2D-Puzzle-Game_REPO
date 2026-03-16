@@ -16,7 +16,7 @@ var data = [
 		"correct": 0
 	},
 	{
-		"question": "Which of these countries experiences 
+		"question": "Which of these countries experiences
 		Midnight Sun for 6 months?",
 		"options": ["Norway", "Netherland"],
 		"correct": 0
@@ -37,13 +37,13 @@ var data = [
 		"correct": 1
 	},
 	{
-		"question": "Which of these is an existing 
+		"question": "Which of these is an existing
 		Tectonic Plate?",
 		"options": ["Eurasian Plate", "Peruvian Plate"],
 		"correct": 0
 	},
 	{
-		"question": "The Equator line passes through 
+		"question": "The Equator line passes through
 		which of these countries?",
 		"options": ["Indonesia", "Russia"],
 		"correct": 0
@@ -54,7 +54,7 @@ var data = [
 		"correct": 0
 	}, #Mahira-Started adding questions
 	{
-		"question": "What season does Australia 
+		"question": "What season does Australia
 		experience in December?",
 		"options": ["Winter","Summer"],
 		"correct": 1
@@ -75,7 +75,7 @@ var data = [
 		"correct": 1
 	},
 	{
-		"question": "Which country is home to the most 
+		"question": "Which country is home to the most
 		timezones in the world?",
 		"options": ["France", "Russia"],
 		"correct": 0
@@ -86,32 +86,32 @@ var data = [
 		"correct": 0
 	},
 	{
-		"question": "What is the 'Golden Ratio' in numerical 
+		"question": "What is the 'Golden Ratio' in numerical
 		representation?",
 		"options": ["1.618", "2.718"],
 		"correct": 0
 	},
 	{
 		"question": "Who invented Algebra and Algorithms?",
-		"options": ["Leonhard Euler", "Muhammad ibn 
+		"options": ["Leonhard Euler", "Muhammad ibn
 		Musa al-Khwarizmi"],
 		"correct": 1
 	},
 	{
-		"question": "The word 'Bank' and the word 'Bankruptcy' 
+		"question": "The word 'Bank' and the word 'Bankruptcy'
 		both come from an Italian word for____",
 		"options": ["A locked chest", "A wooden bench"],
 		"correct":1
 	},
 	{
-		"question": "You are statistically more 
-		likely to be killed by a falling 
+		"question": "You are statistically more
+		likely to be killed by a falling
 		vending machine than by what animal?",
 		"options": ["A Shark", "A Bear"],
 		"correct": 0
 	},
 	{
-		"question": "Which came first: the Orange (the fruit) 
+		"question": "Which came first: the Orange (the fruit)
 		or Orange (the color)?",
 		"options": ["The fruit", "The color"],
 		"correct": 0
@@ -122,7 +122,7 @@ var data = [
 		"correct": 0
 	},
 	{
-		"question": "Certain Siphonophores can be longer 
+		"question": "Certain Siphonophores can be longer
 		than Blue whales?",
 		"options": ["True", "False"],
 		"correct": 0
@@ -133,20 +133,20 @@ var data = [
 		"correct": 0
 	},
 	{
-		"question": "Female platypuses sweat milk from their skin, 
+		"question": "Female platypuses sweat milk from their skin,
 		because they don’t have nipples",
 		"options": ["True", "False"],
 		"correct": 0
 	},
 	{
-		"question": "Male seahorse is the one that carries the eggs 
+		"question": "Male seahorse is the one that carries the eggs
 		and gives birth",
 		"options": ["True", "False"],
 		"correct": 0
 	},
 	{
-		"question": "If a one legged Octopus gives 
-		one of its legs to its mate, how many legs 
+		"question": "If a one legged Octopus gives
+		one of its legs to its mate, how many legs
 		does the octopus now have?",
 		"options": ["7","0"],
 		"correct": 1
@@ -167,13 +167,13 @@ var data = [
 		"correct": 0
 	},
 	{
-		"question": "Washington Square, Madison Square, Bryant Park, 
+		"question": "Washington Square, Madison Square, Bryant Park,
 		and Union Square Parks were all formerly:",
 		"options": ["Early Settlements", "Graveyards"],
 		"correct": 1
 	},
 	{
-		"question": "Which body of water flows 
+		"question": "Which body of water flows
 		beneath the Brooklyn Bridge?",
 		"options": ["East River", "Delaware River"],
 		"correct": 0
@@ -189,76 +189,81 @@ var data = [
 		"correct": 0
 	},
 	{
-		"question": "Which of these walking tours actually 
+		"question": "Which of these walking tours actually
 		take place in New York?",
 		"options": ["Rat Tour", "Snake Tour"],
 		"correct": 0
 	},
 	{
-		"question": "If a company’s profits are 'Decimated,' 
-		what percentage of your unit would be killed 
+		"question": "If a company’s profits are 'Decimated,'
+		what percentage of your unit would be killed
 		if you were 'Decimated'?",
 		"options": ["10%", "90%"],
 		"correct": 0
 	},
 	{
-		"question": "What did an idiōtēs (idiot) 
+		"question": "What did an idiōtēs (idiot)
 		originally refer to in Greek?",
 		"options": ["A private citizen", "A person who couldn't count"],
 		"correct": 0
 	},
 	{
-		"question": "The word 'Muscle' comes from the Latin musculus. 
-		If you translate it literally, _______ is 
+		"question": "The word 'Muscle' comes from the Latin musculus.
+		If you translate it literally, _______ is
 		is under your skin",
 		"options": ["A little mouse", "A little snale"],
 		"correct": 0
 	},
 	{
-		"question": "How did Bill Cipher (yeah, the triangle guy 
+		"question": "How did Bill Cipher (yeah, the triangle guy
 		from the hit 2012 TV show Gravity Falls) die?",
 		"options": ["He didn't die, He's in Therapy", "Gun"],
 		"correct": 0
 	},
 	{
-		"question": "Which light has the highest frequency and 
+		"question": "Which light has the highest frequency and
 		lowest wavelength?",
 		"options": ["Violet Light", "Red Light"],
 		"correct": 0
 	},
 	{
-		"question": "Which of these are considered a 'Fish' 
+		"question": "Which of these are considered a 'Fish'
 		by modern zoologists?",
 		"options": [ "Shellfish", "Seahorse" ],
 		"correct": 1
 	},
 	{
-		"question": "The word Gymnasium comes from 
-		the Ancient Greek word gymnós. What does 
+		"question": "The word Gymnasium comes from
+		the Ancient Greek word gymnós. What does
 		that root mean?",
 		"options": [ "To sweat", "To be naked" ],
 		"correct": 1
 	},
 	{
-		"question": "Sharks are exclusively found 
+		"question": "Sharks are exclusively found
 		in marine/saltwater environments",
 		"options": [ "True", "False" ],
 		"correct": 1
 	},
 	{
 		"question": "Clown Fish...",
-		"options": [ "are solitary creatures", "have a caste system 
-		and can change sex" ],
+		"options": [ "are solitary creatures who
+		 only interact with other 
+		clownfish when they mate", "have a caste system and 
+		change sex whenever a higher 
+		caste clownfish dies"],
 		"correct": 1
 	},
 	{
 		"question": "Lungfish",
-		"options": [ "Have lungs", "Do not actually have lungs" ],
+		"options": [ "Have lungs", "Do not actually have lungs,
+		and are called that because they can survive
+		out of water longer than other fish" ],
 		"correct": 0
 	},
 	{
 		"question": "Pigs sweat",
-		"options": [ "True, they sweat.", "False, they don't have 
+		"options": [ "True, they sweat.", "False, they don't have
 		functional sweat glands." ],
 		"correct": 1
 	},
@@ -271,6 +276,144 @@ var data = [
 		"question": "Solve for a: 3a + 2a = 25",
 		"options": [ "5", "Need more information" ],
 		"correct": 0
-	}
+	},
+	
+	{
+		"question": "If you travel upwards at 60 mph (96 km/h),
+		 how long will it take you to reach space 
+		(as recognized by the Kármán line)?",
+		"options": ["About a week", "About an hour"],
+		"correct": 1
+	},
+	{ 	
+		"question": "Which have existed longer on Earth?",
+		"options": ["sharks", "trees"],
+		"correct": 0
+	},
+	{ 	
+		"question": "What makes a Fish a Fish?",
+		"options": ["Aquatic animal
+		 with a tail, scales, 
+		and gills", "Fish is not a precise
+		scientific term, but a 
+		colliquial one. Therefore, 
+		anything considered a 
+		fish by the general 
+		population is a fish."],
+		"correct": 1
+	},
+	{ 	
+		"question": "spaghetti and meatballs as a dish
+		 was created in",
+		"options": ["Little Italy", "Southern Italy"],
+		"correct": 0
+	},
+	{ 	
+		"question": "how many boroughs are there in New York City?",
+		"options": ["5", "6"],
+		"correct": 0
+	},
+	{	
+		"question": "which was the first state formed in the USA?",
+		"options": ["Delaware", "Washington"],
+		"correct": 0
+	},
+	{	
+		"question": "What is the East River in NYC?",
+		"options": ["a river", "a tidal strait"],
+		"correct": 1
+	},
+	{ 	
+		"question": "Arapaima can survive in waters with lower
+		 oxygen levels than most fish can tolerate because...",
+		"options": ["Arapaima have specialized
+		 glands that regulate oxygen usage
+		 to be more efficient when there is
+		 less oxygen in the environment", "Arapaima can use their
+		 swim bladder like a lung 
+		and will surface for air"],
+		"correct": 1
+	},
+	{	
+		"question": "Tollund Man is",
+		"options": ["a bog mummy", "the mascot of a Danish
+		 candy company"],
+		"correct": 0
+	},
+	{	
+		"question": "Brine pools, often described as looking 
+		like underwater lakes...",
+		"options": ["were invented by Jules Verne
+		in his novel Twenty Thousand
+		Leagues Under the Sea and do
+		not really exist", "are toxic environments for many 
+		organisms, and are often seen littered 
+		with mummified fish, crabs,
+		 and other organisms"],
+		"correct": 1
+	},
+	{ 	
+		"question": "Platypuses give birth to live young",
+		"options": ["True, like other mammals, 
+		they give birth to live young", "False, as monotremes,
+		they are one of few 
+		egg-laying mammals"],
+		"correct": 1
+	},
+	{	
+		"question": "Solve for x: 3a + 2a = 25",
+		"options": ["a = 5", "need more information"],
+		"correct": 1
+	},
+	{	
+		"question": "how much do you love me 
+		(the slightly unnerving disembodied face drawn 
+		in MS Paint)?",
+		"options": ["A whoooooooole lot! :)", "Not at all (wrong answer)"],
+		"correct": 0
+	},
+	{	
+		"question": "Will my (the slightly unnerving disembodied
+		 face drawn in MS Paint) dad (Mr. the slightly unnerving 
+		disembodied face drawn in MS Paint) ever return with the milk?",
+		"options": ["it's me, my child, 
+		I have finally returned 
+		(you are larping as my dad)", "You do not have a dad,
+		 you are a slightly unnerving 
+		disembodied face drawn in MS Paint and 
+		those don't have dads 
+		(this is technically true but please
+		 pick the other option
+		 PLEASE I WILL GIVE YOU A POINT!
+		 WE CAN PLAY CATCH!!!!)"],
+		"correct": 0
+	},
+	{	
+		"question": "What did I 
+		(the slightly unnerving disembodied face
+		 drawn in MS Paint) have for breakfast?",
+		"options": ["JPGs of waffles", "Real waffles like
+		 a real normal person"],
+		"correct": 0
+	},
+	{	
+		"question": "Will you....ouhhhh ummm.......
+		willyougototheschooldancewithme 
+		(the slightly unnerving disembodied face drawn in MS Paint)?",
+		"options": ["Yes! Of course!!
+		 This is a dream come true!!!!", "What did you just say?????"],
+		"correct": 0
+	},
+	 
+	
+	
+	
+	
+	#{	"question": "I found a a a WEIRD FREAKING THING(!!!!!!) outside! ...Should I keep it? (?????)",
+		#"options": ["yes", "no"],
+		#"correct": 1
+	#}
+	
+	
 	#keep adding more here
 ]
