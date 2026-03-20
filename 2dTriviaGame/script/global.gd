@@ -228,8 +228,10 @@ var data = [
 	{
 		"question": "Lungfish",
 		"options": [ "Have lungs", "Do not actually have lungs,
-		and are called that because they can survive
-		out of water longer than other fish" ],
+		and are called that 
+		because they can survive
+		out of water longer 
+		than other fish" ],
 		"correct": 0
 	},
 	{

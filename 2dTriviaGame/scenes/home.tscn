@@ -3,14 +3,67 @@
 [ext_resource type="Script" uid="uid://dl5jwp0w7a1u6" path="res://script/home.gd" id="1_u4wd2"]
 [ext_resource type="PackedScene" uid="uid://bsr1mt4uaeqev" path="res://scenes/reaction.tscn" id="2_w18ys"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_krot7"]
-font_size = 60
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4wd2"]
+content_margin_left = 25.0
+content_margin_top = 25.0
+content_margin_right = 25.0
+content_margin_bottom = 25.0
+bg_color = Color(0.71101844, 0.9626259, 0.88279045, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="Theme" id="Theme_krot7"]
 default_font_size = 24
 
-[node name="Home" type="Control" unique_id=182376782]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_reixx"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w18ys"]
+bg_color = Color(0.89275575, 0.89275575, 0.8927557, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhids"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[node name="Home" type="Control" unique_id=182376782 node_paths=PackedStringArray("dialogue_text")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +71,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u4wd2")
+dialogue_text = NodePath("MarginContainer/VBoxContainer/HBoxContainer/dialogue_text")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1957704364]
 layout_mode = 0
@@ -43,33 +97,71 @@ theme_override_constants/margin_bottom = 20
 custom_minimum_size = Vector2(1000, 500)
 layout_mode = 2
 theme_override_constants/separation = 20
-alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2050760617]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="dialogue_text" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=674581068]
+custom_minimum_size = Vector2(775, 300)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_u4wd2")
+text = "Text"
+autowrap_mode = 3
 
 [node name="reaction" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1107030189 instance=ExtResource("2_w18ys")]
-position = Vector2(123.80107, -61.5)
-scale = Vector2(0.34603658, 0.34603658)
+position = Vector2(950, 161)
+scale = Vector2(0.5, 0.5)
 animation = &"2"
 autoplay = "2"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=472757526]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Welcome!"
-label_settings = SubResource("LabelSettings_krot7")
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=415692970]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 58
-text = "Start"
+[node name="critter" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=26719784 instance=ExtResource("2_w18ys")]
+visible = false
+position = Vector2(855, 54)
+scale = Vector2(0.18140243, 0.18140244)
+autoplay = "4"
 
 [node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=362307844]
 layout_mode = 2
 theme = SubResource("Theme_krot7")
+theme_override_colors/font_color = Color(0.8556813, 0.24950486, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_styles/normal = SubResource("StyleBoxFlat_reixx")
 placeholder_text = "Your Name"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1700965008]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="dialogue_opt2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1795158761]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
+theme_override_colors/font_hover_color = Color(0.19076204, 0.19076237, 0.19076279, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_w18ys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w18ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhids")
+text = "opt1"
+
+[node name="dialogue_opt1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=415692970]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
+theme_override_colors/font_hover_color = Color(0.19215687, 0.19215687, 0.19215687, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_w18ys")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w18ys")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uhids")
+text = "opt2"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt2" to="." method="_on_dialogue_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt1" to="." method="_on_dialogue_pressed"]
