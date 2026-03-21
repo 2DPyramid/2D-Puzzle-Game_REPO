@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dt2qts3l0gfry" path="res://script/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bsr1mt4uaeqev" path="res://scenes/reaction.tscn" id="2_sugp2"]
+[ext_resource type="AudioStream" uid="uid://bkeo7qkm0cxuq" path="res://Music/Edited_Background _Game_Music _03.mp3" id="3_sugp2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wfyh"]
 font_size = 33
@@ -165,6 +166,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_0wfyh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_o5qli")
 text = "Answer 2"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1567320782]
+stream = ExtResource("3_sugp2")
+autoplay = true
+parameters/looping = true
+
 [connection signal="timeout" from="MarginContainer/VBoxContainer/timer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/answer/Button" to="." method="_on_button_pressed" binds= [0]]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/answer/Button2" to="." method="_on_button_pressed" binds= [1]]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

@@ -12,6 +12,8 @@ extends Control
 @export var timer: Timer
 @onready var critter: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/critter
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 #get the button texts and question text from the scene
 
 var current = 0 #start at first question
@@ -22,9 +24,10 @@ func _ready():
 	print(str(Global.data.size()) + " Questions Total")
 	update_ui()
 	time_left_to_live()
-
-
-
+	audio_stream_player.finished.connect(_on_audio_stream_player_finished)
+	audio_stream_player.play()
+	
+	
 func update_ui():
 	# .size() tells us max number of questions
 	#if current < 30: #30 questions max
@@ -121,3 +124,7 @@ func _on_timer_timeout() -> void:
 	print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
 	ans_1.hide()
 	ans_2.hide()
+
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player.play()
