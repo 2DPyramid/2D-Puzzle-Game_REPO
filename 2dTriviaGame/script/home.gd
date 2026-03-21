@@ -1,5 +1,4 @@
 extends Control
-@onready var button: Button = $MarginContainer/VBoxContainer/Button
 @onready var dialogue_opt_1: Button = $MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt1
 @onready var dialogue_opt_2: Button = $MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt2
 @export var dialogue_text: Label

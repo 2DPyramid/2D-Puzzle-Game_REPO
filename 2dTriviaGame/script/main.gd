@@ -47,6 +47,7 @@ func update_ui():
 		score_label.text = "Percent Correct: "
 		score.text = str( int((correctAns / current) *100) )  + "%"
 		print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
+		print("Score: " + str(correctAns))
 		ans_1.hide()
 		ans_2.hide()
 
@@ -122,6 +123,7 @@ func _on_timer_timeout() -> void:
 	score_label.text = "Percent Correct: "
 	score.text = str( int((correctAns / current) *100) )  + "%"
 	print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
+	print("Score: " + str(correctAns))
 	ans_1.hide()
 	ans_2.hide()
 
