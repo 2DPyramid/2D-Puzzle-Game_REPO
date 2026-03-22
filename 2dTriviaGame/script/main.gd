@@ -26,7 +26,9 @@ func _ready():
 	time_left_to_live()
 	audio_stream_player.finished.connect(_on_audio_stream_player_finished)
 	audio_stream_player.play()
-	
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player.play()
 	
 func update_ui():
 	# .size() tells us max number of questions
@@ -126,7 +128,3 @@ func _on_timer_timeout() -> void:
 	print("Score: " + str(correctAns))
 	ans_1.hide()
 	ans_2.hide()
-
-
-func _on_audio_stream_player_finished() -> void:
-	audio_stream_player.play()

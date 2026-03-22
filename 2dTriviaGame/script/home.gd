@@ -4,6 +4,8 @@ extends Control
 @export var dialogue_text: Label
 @onready var input: LineEdit = $MarginContainer/VBoxContainer/LineEdit
 @onready var reaction: AnimatedSprite2D = $MarginContainer/VBoxContainer/HBoxContainer/reaction
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 
 var current_step: int = 0
 var dialogue_data = [
@@ -41,7 +43,12 @@ var dialogue_data = [
 ]
 
 func _ready():
+	audio_stream_player.finished.connect(_on_audio_stream_player_finished)
+	audio_stream_player.play()
 	update_ui()
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player.play()
 	
 func update_ui():
 	var current_data = dialogue_data[current_step]

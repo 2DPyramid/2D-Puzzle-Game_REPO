@@ -3,6 +3,7 @@ extends Node
 func _ready():
 	data.shuffle()
 	#randomize questions
+	
 
 var data = [
 	{

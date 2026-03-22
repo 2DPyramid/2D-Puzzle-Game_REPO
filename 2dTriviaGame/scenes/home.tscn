@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dl5jwp0w7a1u6" path="res://script/home.gd" id="1_u4wd2"]
 [ext_resource type="PackedScene" uid="uid://bsr1mt4uaeqev" path="res://scenes/reaction.tscn" id="2_w18ys"]
+[ext_resource type="AudioStream" uid="uid://cudbai1hgqjee" path="res://Music/the_mountain-background-music-159125.mp3" id="3_w18ys"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4wd2"]
 content_margin_left = 25.0
@@ -162,6 +163,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w18ys")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_w18ys")
 theme_override_styles/hover = SubResource("StyleBoxFlat_uhids")
 text = "opt2"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1247994092]
+stream = ExtResource("3_w18ys")
+volume_db = -5.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt2" to="." method="_on_dialogue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt1" to="." method="_on_dialogue_pressed"]
