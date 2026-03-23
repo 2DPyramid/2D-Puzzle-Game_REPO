@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b3gsrrae7iuxr"]
+
+[ext_resource type="Texture2D" uid="uid://dnqkjsi2uyvf1" path="res://assets/Trixie /Untitled_Artwork.png" id="1_jxlhc"]
+[ext_resource type="Texture2D" uid="uid://djdjjagmd67oj" path="res://assets/Trixie /Untitled_Artwork 1.png" id="2_32hda"]
+[ext_resource type="Texture2D" uid="uid://cmpiwbxrgv1m2" path="res://assets/Trixie /Untitled_Artwork 4.png" id="3_rhi65"]
+[ext_resource type="Texture2D" uid="uid://c11j4aak4oemq" path="res://assets/Trixie /Untitled_Artwork 3.png" id="4_n5rev"]
+[ext_resource type="Texture2D" uid="uid://c6bv0ym1mfng8" path="res://assets/Trixie /Untitled_Artwork 2.png" id="5_822xh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ogmv"]
+atlas = ExtResource("1_jxlhc")
+region = Rect2(0, 0, 769, 656)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghu05"]
+atlas = ExtResource("2_32hda")
+region = Rect2(0, 0, 769, 656)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3qdu"]
+atlas = ExtResource("3_rhi65")
+region = Rect2(0, 0, 769, 656)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b1ai"]
+atlas = ExtResource("4_n5rev")
+region = Rect2(0, 0, 769, 656)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuqx7"]
+atlas = ExtResource("5_822xh")
+region = Rect2(0, 0, 769, 656)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlq24"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ogmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghu05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3qdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8b1ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuqx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1954418145]
+sprite_frames = SubResource("SpriteFrames_xlq24")
+frame = 3
+frame_progress = 0.31779444
