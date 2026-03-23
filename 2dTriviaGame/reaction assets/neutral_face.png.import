@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ghrihptqw6v"
-path="res://.godot/imported/Untitled_Artwork-1.png-0e4b8957c4b67d70c56670314f5f3120.ctex"
+uid="uid://b7ye7j1nrj4y4"
+path="res://.godot/imported/neutral_face.png-18a60bcfbda0f0b7157793a278cbaa2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Trixie/Untitled_Artwork-1.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-1.png-0e4b8957c4b67d70c56670314f5f3120.ctex"]
+source_file="res://reaction assets/neutral_face.png"
+dest_files=["res://.godot/imported/neutral_face.png-18a60bcfbda0f0b7157793a278cbaa2a.ctex"]
 
 [params]
 

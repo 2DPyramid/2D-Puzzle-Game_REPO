@@ -27,6 +27,7 @@ func _ready():
 	update_ui()
 	time_left_to_live()
 	audio_stream_player.play()
+	$"Results Reaction".hide()
 
 func _on_audio_stream_player_finished() -> void:
 	audio_stream_player.play()
@@ -153,3 +154,10 @@ func _on_timer_timeout() -> void:
 	print("Score: " + str(correctAns))
 	ans_1.hide()
 	ans_2.hide()
+	$"Results Reaction".show()
+	if correctAns / current * 100 > 70:
+			$end.play("YIPPEE")
+	else:
+			$end.play("LMAO")
+		
+			

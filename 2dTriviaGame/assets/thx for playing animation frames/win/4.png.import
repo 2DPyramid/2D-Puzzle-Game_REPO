@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ghrihptqw6v"
-path="res://.godot/imported/Untitled_Artwork-1.png-0e4b8957c4b67d70c56670314f5f3120.ctex"
+uid="uid://d0ptxf15wfmt8"
+path="res://.godot/imported/4.png-8d4e6d1bac125cd4afc866a2d03561c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Trixie/Untitled_Artwork-1.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-1.png-0e4b8957c4b67d70c56670314f5f3120.ctex"]
+source_file="res://assets/thx for playing animation frames/win/4.png"
+dest_files=["res://.godot/imported/4.png-8d4e6d1bac125cd4afc866a2d03561c0.ctex"]
 
 [params]
 

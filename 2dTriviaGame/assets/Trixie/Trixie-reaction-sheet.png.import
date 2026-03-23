@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5n2oes8fe3uv"
-path="res://.godot/imported/Trixie-reaction sheet.png-da8cae49fc5c3a28b2b35a16009802b7.ctex"
+path="res://.godot/imported/Trixie-reaction-sheet.png-9c74a384877023e41ba6c9adecc676ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Trixie /Trixie-reaction sheet.png"
-dest_files=["res://.godot/imported/Trixie-reaction sheet.png-da8cae49fc5c3a28b2b35a16009802b7.ctex"]
+source_file="res://assets/Trixie/Trixie-reaction-sheet.png"
+dest_files=["res://.godot/imported/Trixie-reaction-sheet.png-9c74a384877023e41ba6c9adecc676ca.ctex"]
 
 [params]
 

@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://byumjtlvnr7qs"]
+
+[ext_resource type="Texture2D" uid="uid://ctayv2dajay8a" path="res://assets/thx for playing animation frames/lose/1.png" id="1_o5lv4"]
+[ext_resource type="Texture2D" uid="uid://boddbxy0g4orr" path="res://assets/thx for playing animation frames/lose/2.png" id="2_ee763"]
+[ext_resource type="Texture2D" uid="uid://bd1nndqfaf2b6" path="res://assets/thx for playing animation frames/lose/3.png" id="3_nl5ow"]
+[ext_resource type="Texture2D" uid="uid://dopeeyv3rl8s" path="res://assets/thx for playing animation frames/win/1.png" id="4_ovs12"]
+[ext_resource type="Texture2D" uid="uid://cwfl2bha1qw3i" path="res://assets/thx for playing animation frames/win/2.png" id="5_oc5t2"]
+[ext_resource type="Texture2D" uid="uid://xu5tukgu16m" path="res://assets/thx for playing animation frames/win/3.png" id="6_njoby"]
+[ext_resource type="Texture2D" uid="uid://d0ptxf15wfmt8" path="res://assets/thx for playing animation frames/win/4.png" id="7_sf0ys"]
+[ext_resource type="Script" uid="uid://fyncixlubfmp" path="res://scenes/animated_sprite_2d.gd" id="8_ee763"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_stj65"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o5lv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ee763")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nl5ow")
+}],
+"loop": true,
+"name": &"LMAO",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ovs12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oc5t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ovs12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oc5t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ovs12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oc5t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ovs12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oc5t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_njoby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sf0ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_njoby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sf0ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_njoby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sf0ys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_njoby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sf0ys")
+}],
+"loop": true,
+"name": &"YIPPEE",
+"speed": 7.0
+}]
+
+[node name="results reaction" type="Node2D" unique_id=1164780212]
+
+[node name="lilguy" type="AnimatedSprite2D" parent="." unique_id=1410355775]
+position = Vector2(589, 336)
+sprite_frames = SubResource("SpriteFrames_stj65")
+animation = &"YIPPEE"
+frame = 14
+frame_progress = 0.68424386
+script = ExtResource("8_ee763")
