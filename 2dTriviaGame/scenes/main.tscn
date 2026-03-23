@@ -5,7 +5,6 @@
 [ext_resource type="AudioStream" uid="uid://bkeo7qkm0cxuq" path="res://Music/Edited_Background _Game_Music _03.mp3" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b3gsrrae7iuxr" path="res://scenes/reaction_2.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://b5n2oes8fe3uv" path="res://assets/Trixie/Trixie-reaction-sheet.png" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://byumjtlvnr7qs" path="res://scenes/end.tscn" id="6_tefeu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wfyh"]
 font_size = 33
@@ -178,7 +177,7 @@ text = "Timer:"
 label_settings = SubResource("LabelSettings_0wfyh")
 
 [node name="Timer" type="Timer" parent="MarginContainer/VBoxContainer/timer" unique_id=1916004089]
-wait_time = 200.0
+wait_time = 700.0
 one_shot = true
 autostart = true
 
@@ -204,7 +203,6 @@ theme_override_constants/separation = 10
 position = Vector2(939, 33)
 scale = Vector2(0.5, 0.5)
 animation = &"0"
-autoplay = "2"
 
 [node name="critter" parent="MarginContainer/VBoxContainer/question" unique_id=1107030189 instance=ExtResource("2_sugp2")]
 visible = false
@@ -264,7 +262,6 @@ parameters/looping = true
 position = Vector2(578.00006, 566)
 scale = Vector2(0.46875, 0.46875)
 sprite_frames = SubResource("SpriteFrames_ya4ey")
-autoplay = "2"
 
 [node name="char_comments" type="Label" parent="." unique_id=1291659467]
 layout_mode = 0
@@ -279,8 +276,7 @@ label_settings = SubResource("LabelSettings_tefeu")
 horizontal_alignment = 2
 autowrap_mode = 3
 
-[node name="Results Reaction" parent="." unique_id=1164780212 instance=ExtResource("6_tefeu")]
-position = Vector2(-20, 67)
-
 [connection signal="timeout" from="MarginContainer/VBoxContainer/timer/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/answer/Button" to="." method="_on_button_pressed" binds= [0]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/answer/Button2" to="." method="_on_button_pressed" binds= [1]]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

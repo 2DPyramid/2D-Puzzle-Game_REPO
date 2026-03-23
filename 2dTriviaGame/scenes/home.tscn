@@ -116,8 +116,6 @@ autowrap_mode = 3
 [node name="reaction" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1107030189 instance=ExtResource("2_w18ys")]
 position = Vector2(950, 161)
 scale = Vector2(0.5, 0.5)
-animation = &"2"
-autoplay = "2"
 
 [node name="critter" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=26719784 instance=ExtResource("2_w18ys")]
 visible = false
