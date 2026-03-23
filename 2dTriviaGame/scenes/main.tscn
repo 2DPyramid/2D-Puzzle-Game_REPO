@@ -203,7 +203,6 @@ theme_override_constants/separation = 10
 position = Vector2(939, 33)
 scale = Vector2(0.5, 0.5)
 animation = &"0"
-autoplay = "2"
 
 [node name="critter" parent="MarginContainer/VBoxContainer/question" unique_id=1107030189 instance=ExtResource("2_sugp2")]
 visible = false
@@ -263,7 +262,6 @@ parameters/looping = true
 position = Vector2(578.00006, 566)
 scale = Vector2(0.46875, 0.46875)
 sprite_frames = SubResource("SpriteFrames_ya4ey")
-autoplay = "2"
 
 [node name="char_comments" type="Label" parent="." unique_id=1291659467]
 layout_mode = 0

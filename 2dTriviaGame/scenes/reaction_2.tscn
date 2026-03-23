@@ -1,40 +1,32 @@
 [gd_scene format=3 uid="uid://b3gsrrae7iuxr"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6jre5"]
+[ext_resource type="Texture2D" uid="uid://b5n2oes8fe3uv" path="res://assets/Trixie/Trixie-reaction-sheet.png" id="1_duiq0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1ogmv"]
-atlas = SubResource("CompressedTexture2D_6jre5")
-region = Rect2(0, 0, 769, 656)
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2b0p"]
+atlas = ExtResource("1_duiq0")
+region = Rect2(0, 0, 740, 631)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_duiq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5n40"]
+atlas = ExtResource("1_duiq0")
+region = Rect2(740, 0, 740, 631)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ghu05"]
-atlas = SubResource("CompressedTexture2D_duiq0")
-region = Rect2(0, 0, 769, 656)
+[sub_resource type="AtlasTexture" id="AtlasTexture_qekcr"]
+atlas = ExtResource("1_duiq0")
+region = Rect2(1480, 0, 740, 631)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p6dhs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxlhc"]
+atlas = ExtResource("1_duiq0")
+region = Rect2(2220, 0, 740, 631)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b3qdu"]
-atlas = SubResource("CompressedTexture2D_p6dhs")
-region = Rect2(0, 0, 769, 656)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q2b0p"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8b1ai"]
-atlas = SubResource("CompressedTexture2D_q2b0p")
-region = Rect2(0, 0, 769, 656)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m5n40"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kuqx7"]
-atlas = SubResource("CompressedTexture2D_m5n40")
-region = Rect2(0, 0, 769, 656)
+[sub_resource type="AtlasTexture" id="AtlasTexture_32hda"]
+atlas = ExtResource("1_duiq0")
+region = Rect2(2960, 0, 740, 631)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xlq24"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1ogmv")
+"texture": SubResource("AtlasTexture_q2b0p")
 }],
 "loop": true,
 "name": &"0",
@@ -42,7 +34,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ghu05")
+"texture": SubResource("AtlasTexture_m5n40")
 }],
 "loop": true,
 "name": &"1",
@@ -50,7 +42,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b3qdu")
+"texture": SubResource("AtlasTexture_qekcr")
 }],
 "loop": true,
 "name": &"2",
@@ -58,7 +50,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8b1ai")
+"texture": SubResource("AtlasTexture_jxlhc")
 }],
 "loop": true,
 "name": &"3",
@@ -66,7 +58,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kuqx7")
+"texture": SubResource("AtlasTexture_32hda")
 }],
 "loop": true,
 "name": &"4",
@@ -76,3 +68,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1954418145]
 sprite_frames = SubResource("SpriteFrames_xlq24")
 animation = &"2"
+autoplay = "2"

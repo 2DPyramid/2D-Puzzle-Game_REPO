@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://3c1hib6n8vhp"]
 
 [ext_resource type="Script" uid="uid://diikjse7tbd0e" path="res://script/title.gd" id="1_y7k74"]
+[ext_resource type="PackedScene" uid="uid://bsr1mt4uaeqev" path="res://scenes/reaction.tscn" id="2_b3w7a"]
 [ext_resource type="FontFile" uid="uid://bu0chaajs7wu8" path="res://assets/Game Paused DEMO.otf" id="2_oyqm6"]
-[ext_resource type="Texture2D" uid="uid://cc1c63h02563p" path="res://assets/neutral_face.png" id="3_mom7w"]
 [ext_resource type="PackedScene" uid="uid://b3gsrrae7iuxr" path="res://scenes/reaction_2.tscn" id="3_pyl7j"]
 [ext_resource type="Texture2D" uid="uid://b5n2oes8fe3uv" path="res://assets/Trixie/Trixie-reaction-sheet.png" id="5_b3w7a"]
 
@@ -142,10 +142,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_oyqm6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3xoar")
 text = "START"
 
-[node name="NeutralFace" type="Sprite2D" parent="." unique_id=1552086612]
-position = Vector2(1038, 511.00006)
-scale = Vector2(0.32088432, 0.32088426)
-texture = ExtResource("3_mom7w")
+[node name="AnimatedSprite2D" parent="." unique_id=1107030189 instance=ExtResource("2_b3w7a")]
+position = Vector2(988, 422.99997)
+scale = Vector2(0.34756097, 0.34756097)
 
 [node name="Label" type="Label" parent="." unique_id=54526492]
 layout_mode = 0
