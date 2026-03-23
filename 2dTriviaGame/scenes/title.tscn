@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://3c1hib6n8vhp"]
 
 [ext_resource type="Script" uid="uid://diikjse7tbd0e" path="res://title.gd" id="1_y7k74"]
-[ext_resource type="Texture2D" uid="uid://cmpiwbxrgv1m2" path="res://assets/Trixie /Untitled_Artwork 4.png" id="2_3xoar"]
 [ext_resource type="FontFile" uid="uid://bu0chaajs7wu8" path="res://assets/Game Paused DEMO.otf" id="2_oyqm6"]
 [ext_resource type="Texture2D" uid="uid://cc1c63h02563p" path="res://assets/neutral_face.png" id="3_mom7w"]
+[ext_resource type="PackedScene" uid="uid://b3gsrrae7iuxr" path="res://scenes/reaction_2.tscn" id="3_pyl7j"]
+[ext_resource type="Texture2D" uid="uid://b5n2oes8fe3uv" path="res://assets/Trixie /Trixie-reaction sheet.png" id="5_b3w7a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpexm"]
 bg_color = Color(1, 1, 1, 1)
@@ -46,6 +47,69 @@ font_size = 87
 outline_color = Color(0.14901961, 0.14901961, 1, 1)
 shadow_size = 8
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
+atlas = ExtResource("5_b3w7a")
+region = Rect2(0, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6xl0"]
+atlas = ExtResource("5_b3w7a")
+region = Rect2(740, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
+atlas = ExtResource("5_b3w7a")
+region = Rect2(1480, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
+atlas = ExtResource("5_b3w7a")
+region = Rect2(2220, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_choun"]
+atlas = ExtResource("5_b3w7a")
+region = Rect2(2960, 0, 740, 631)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rr2b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tefeu")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6xl0")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tipki")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85g3d")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_choun")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
 [node name="Title" type="Control" unique_id=676522004]
 layout_mode = 3
 anchors_preset = 0
@@ -78,11 +142,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_oyqm6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3xoar")
 text = "START"
 
-[node name="UntitledArtwork4" type="Sprite2D" parent="." unique_id=1024035285]
-position = Vector2(150, 494)
-scale = Vector2(0.37804878, 0.37804878)
-texture = ExtResource("2_3xoar")
-
 [node name="NeutralFace" type="Sprite2D" parent="." unique_id=1552086612]
 position = Vector2(1038, 511.00006)
 scale = Vector2(0.32088432, 0.32088426)
@@ -102,5 +161,10 @@ theme_override_font_sizes/font_size = 100
 text = "TOTALLY NORMAL TRIVIA "
 label_settings = SubResource("LabelSettings_kpexm")
 horizontal_alignment = 1
+
+[node name="reaction_2" parent="." unique_id=1954418145 instance=ExtResource("3_pyl7j")]
+position = Vector2(162.00002, 528.00006)
+scale = Vector2(0.46875, 0.46875)
+sprite_frames = SubResource("SpriteFrames_4rr2b")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

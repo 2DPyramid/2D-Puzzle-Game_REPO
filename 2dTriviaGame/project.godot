@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2D-Trivia_Game"
-run/main_scene="uid://b161qiw7iucub"
+run/main_scene="uid://3c1hib6n8vhp"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

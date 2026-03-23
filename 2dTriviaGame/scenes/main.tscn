@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bsr1mt4uaeqev" path="res://scenes/reaction.tscn" id="2_sugp2"]
 [ext_resource type="AudioStream" uid="uid://bkeo7qkm0cxuq" path="res://Music/Edited_Background _Game_Music _03.mp3" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b3gsrrae7iuxr" path="res://scenes/reaction_2.tscn" id="4_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://b5n2oes8fe3uv" path="res://assets/Trixie /Trixie-reaction sheet.png" id="5_tbgi4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0wfyh"]
 font_size = 33
@@ -44,6 +45,69 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
+atlas = ExtResource("5_tbgi4")
+region = Rect2(0, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6xl0"]
+atlas = ExtResource("5_tbgi4")
+region = Rect2(740, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
+atlas = ExtResource("5_tbgi4")
+region = Rect2(1480, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
+atlas = ExtResource("5_tbgi4")
+region = Rect2(2220, 0, 740, 631)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_choun"]
+atlas = ExtResource("5_tbgi4")
+region = Rect2(2960, 0, 740, 631)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ya4ey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tefeu")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6xl0")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tipki")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85g3d")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_choun")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyhfs"]
 content_margin_left = 25.0
@@ -138,7 +202,7 @@ theme_override_constants/separation = 10
 [node name="reaction" parent="MarginContainer/VBoxContainer/question" unique_id=54342535 instance=ExtResource("2_sugp2")]
 position = Vector2(939, 33)
 scale = Vector2(0.5, 0.5)
-animation = &"2"
+animation = &"0"
 autoplay = "2"
 
 [node name="critter" parent="MarginContainer/VBoxContainer/question" unique_id=1107030189 instance=ExtResource("2_sugp2")]
@@ -198,6 +262,8 @@ parameters/looping = true
 [node name="reaction_2" parent="." unique_id=1954418145 instance=ExtResource("4_jyhfs")]
 position = Vector2(578.00006, 566)
 scale = Vector2(0.46875, 0.46875)
+sprite_frames = SubResource("SpriteFrames_ya4ey")
+autoplay = "2"
 
 [node name="char_comments" type="Label" parent="." unique_id=1291659467]
 layout_mode = 0

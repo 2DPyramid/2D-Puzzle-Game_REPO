@@ -11,8 +11,8 @@ extends Control
 @onready var timer_label: Label = $MarginContainer/VBoxContainer/timer/timer_label
 @export var timer: Timer
 @onready var critter: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/critter
-@onready var reaction_2: AnimatedSprite2D = $reaction_2
 @onready var char_comments: Label = $char_comments
+@onready var reaction_2: AnimatedSprite2D = $reaction_2
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
