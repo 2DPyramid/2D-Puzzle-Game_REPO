@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://xq85r17vk5st" path="res://besties.tscn" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://dic7tnm7dtlrk" path="res://goomba with hat.tscn" id="2_r0du0"]
+[ext_resource type="PackedScene" uid="uid://m3psd35w8f1m" path="res://nemo with hat .tscn" id="3_r0du0"]
 
 [node name="Node2D" type="Node2D" unique_id=1560164826]
 
@@ -10,3 +11,6 @@ position = Vector2(39, -62)
 
 [node name="hatgoomba" parent="." unique_id=561440530 instance=ExtResource("2_r0du0")]
 position = Vector2(657.0001, 538)
+
+[node name="Nemo" parent="." unique_id=64812858 instance=ExtResource("3_r0du0")]
+position = Vector2(196, 548)

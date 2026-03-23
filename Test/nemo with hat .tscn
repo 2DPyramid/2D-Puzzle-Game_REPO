@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://m3psd35w8f1m"]
+
+[ext_resource type="Texture2D" uid="uid://iws24cxqsaro" path="res://Nemo.jpg" id="1_v2qdg"]
+
+[node name="Nemo" type="Sprite2D" unique_id=64812858]
+position = Vector2(270.70416, 542.5)
+scale = Vector2(0.35833332, 0.35833332)
+texture = ExtResource("1_v2qdg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1123405758]
+offset_left = -359.17444
+offset_top = -266.51172
+offset_right = 374.82556
+offset_bottom = -171.58142
+color = Color(0.3137255, 0.1764706, 0.14117648, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1518693370]
+offset_left = -202.89536
+offset_top = -389.30234
+offset_right = 171.05814
+offset_bottom = -255.30234
+color = Color(0.3137255, 0.1764706, 0.14117648, 1)
