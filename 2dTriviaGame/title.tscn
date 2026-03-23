@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://3c1hib6n8vhp"]
+
+[ext_resource type="Script" uid="uid://diikjse7tbd0e" path="res://title.gd" id="1_y7k74"]
+[ext_resource type="Texture2D" uid="uid://cmpiwbxrgv1m2" path="res://assets/Trixie /Untitled_Artwork 4.png" id="2_3xoar"]
+[ext_resource type="FontFile" uid="uid://bu0chaajs7wu8" path="res://assets/Game Paused DEMO.otf" id="2_oyqm6"]
+[ext_resource type="Texture2D" uid="uid://cc1c63h02563p" path="res://assets/neutral_face.png" id="3_mom7w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpexm"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.015686275, 0.015686275, 0.015686275, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oyqm6"]
+bg_color = Color(0.50988466, 0.99935013, 0.6013032, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xoar"]
+bg_color = Color(0.581243, 0.9524675, 0.6952845, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_kpexm"]
+font_size = 87
+outline_color = Color(0.14901961, 0.14901961, 1, 1)
+shadow_size = 8
+
+[node name="Title" type="Control" unique_id=676522004]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 647.0
+script = ExtResource("1_y7k74")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=975423593]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -2.0
+offset_right = 1180.0
+offset_bottom = 911.0
+color = Color(0.09411765, 0.49803922, 1, 1)
+
+[node name="Button" type="Button" parent="." unique_id=243943183]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 344.0
+offset_right = 716.0
+offset_bottom = 485.0
+scale = Vector2(0.9964068, 0.996219)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+theme_override_colors/font_hover_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpexm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oyqm6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3xoar")
+text = "START"
+
+[node name="UntitledArtwork4" type="Sprite2D" parent="." unique_id=1024035285]
+position = Vector2(150, 494)
+scale = Vector2(0.37804878, 0.37804878)
+texture = ExtResource("2_3xoar")
+
+[node name="NeutralFace" type="Sprite2D" parent="." unique_id=1552086612]
+position = Vector2(1038, 511.00006)
+scale = Vector2(0.32088432, 0.32088426)
+texture = ExtResource("3_mom7w")
+
+[node name="Label" type="Label" parent="." unique_id=54526492]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 111.0
+offset_right = 1056.0
+offset_bottom = 217.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("2_oyqm6")
+theme_override_font_sizes/font_size = 100
+text = "TOTALLY NORMAL TRIVIA "
+label_settings = SubResource("LabelSettings_kpexm")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
