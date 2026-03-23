@@ -31,25 +31,44 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1ogmv")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ghu05")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_b3qdu")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8b1ai")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kuqx7")
 }],
 "loop": true,
-"name": &"default",
+"name": &"4",
 "speed": 5.0
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1954418145]
 sprite_frames = SubResource("SpriteFrames_xlq24")
-frame = 3
-frame_progress = 0.31779444
+animation = &"2"

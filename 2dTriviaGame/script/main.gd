@@ -11,6 +11,8 @@ extends Control
 @onready var timer_label: Label = $MarginContainer/VBoxContainer/timer/timer_label
 @export var timer: Timer
 @onready var critter: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/critter
+@onready var reaction_2: AnimatedSprite2D = $reaction_2
+@onready var char_comments: Label = $char_comments
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
@@ -24,7 +26,6 @@ func _ready():
 	print(str(Global.data.size()) + " Questions Total")
 	update_ui()
 	time_left_to_live()
-	audio_stream_player.finished.connect(_on_audio_stream_player_finished)
 	audio_stream_player.play()
 
 func _on_audio_stream_player_finished() -> void:
@@ -59,19 +60,43 @@ func _on_button_pressed(index: int) -> void:
 	
 	if reaction_var == 10:
 		reaction.play("2")
+		reaction_2.play("2")
 	elif reaction_var < 5:
 		reaction.play("0")
+		reaction_2.play("0")
 	elif reaction_var >= 5 and reaction_var < 9:
 		reaction.play("1")
+		reaction_2.play("1")
 	elif reaction_var > 10 and reaction_var < 15:
 		reaction.play("3")
+		reaction_2.play("3")
 	elif reaction_var >= 15:
 		reaction.play("4")
+		reaction_2.play("4")
 		 
-	#var animation_list = reaction.sprite_frames.get_animation_names()
-	#var random_index = randi() % animation_list.size()
-	#var random_anim = animation_list[random_index]
-	#reaction.play(random_anim)
+	var comment_list = ["Just tell me your excuse now so we can save time later.", 
+	"Don’t worry, losing builds character. You’re about to have a lot of character.",
+	"If you beat me, I’ll frame the scoreboard. It’ll be a historical event.",
+	"This is cute. You actually think you have a chance.",
+	"Warm-up’s over. Oh wait... you were actually trying?",
+	"I’ll play with one brain cell to make this fair.",
+	"Lose gracefully. I need a good winner photo for my wall.",
+	"Just tell me your excuse now so we can save time later.",
+	"Should I slow down, or is this your top speed?",
+	"I hope you’re better at this than you are at replying to texts.",
+	"Stretch first, I don’t want you pulling something while chasing my score.",
+	"Did you pre-order the L you’re about to take, or should I gift it to you?",
+	"Stretch first, I don’t want you pulling something while chasing my score.",
+	"I’ll try not to win too fast. I don’t want you to feel scammed.",
+	"Careful trash-talking me, you’re already giving post-game interview energy.”",
+	"Are you playing or just here for the participation trophy experience?",
+	"I’m warming up. You’re already at your limit. This feels illegal.",
+	"Don’t be nervous, losing to me is basically a rite of passage.",
+	"If I lose, I’ll frame it. If you lose, it’s just your personality.",
+	"Hope your excuses are better than your trivia knowledge, because you’re gonna need them."]
+	var random_index = randi() % comment_list.size()
+	var random_comm = comment_list[random_index]
+	char_comments.text = random_comm
 	#display random reaction sprite
 	
 	

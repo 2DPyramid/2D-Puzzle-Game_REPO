@@ -15,7 +15,7 @@ var dialogue_data = [
 		"opt_2": "Uhm... Who are you"
 	},
 	{
-		"character": "Oh, My name is <undecided>! What is your name?",
+		"character": "Oh, My name is Dixie the Trivia Master! What is your name?",
 		"opt_1": "This is my name!",
 		"opt_2": "Why am I here."
 	},
