@@ -54,6 +54,7 @@ func update_ui():
 		print("Score: " + str(correctAns))
 		ans_1.hide()
 		ans_2.hide()
+		char_comments.hide()
 
 
 
