@@ -13,6 +13,9 @@ extends Control
 @onready var critter: AnimatedSprite2D = $MarginContainer/VBoxContainer/question/critter
 @onready var char_comments: Label = $char_comments
 @onready var reaction_2: AnimatedSprite2D = $reaction_2
+@onready var end: Node2D = $end
+@onready var lilguy: AnimatedSprite2D = $end/lilguy
+
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
@@ -27,7 +30,6 @@ func _ready():
 	update_ui()
 	time_left_to_live()
 	audio_stream_player.play()
-	$"Results Reaction".hide()
 
 func _on_audio_stream_player_finished() -> void:
 	audio_stream_player.play()
@@ -155,10 +157,11 @@ func _on_timer_timeout() -> void:
 	print("Score: " + str(correctAns))
 	ans_1.hide()
 	ans_2.hide()
-	$"Results Reaction".show()
+	reaction.hide()
+	end.show()
 	if correctAns / current * 100 > 70:
-			$end.play("YIPPEE")
+			lilguy.play("YIPPEE")
 	else:
-			$end.play("LMAO")
+			lilguy.play("LMAO")
 		
 			
