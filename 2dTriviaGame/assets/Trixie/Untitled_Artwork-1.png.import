@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7ghrihptqw6v"
-path="res://.godot/imported/Untitled_Artwork 1.png-4f61227fb32b3f4852e4cb0bffd47d2d.ctex"
+path="res://.godot/imported/Untitled_Artwork-1.png-0e4b8957c4b67d70c56670314f5f3120.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Trixie /Untitled_Artwork 1.png"
-dest_files=["res://.godot/imported/Untitled_Artwork 1.png-4f61227fb32b3f4852e4cb0bffd47d2d.ctex"]
+source_file="res://assets/Trixie/Untitled_Artwork-1.png"
+dest_files=["res://.godot/imported/Untitled_Artwork-1.png-0e4b8957c4b67d70c56670314f5f3120.ctex"]
 
 [params]
 
