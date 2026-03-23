@@ -177,7 +177,7 @@ text = "Timer:"
 label_settings = SubResource("LabelSettings_0wfyh")
 
 [node name="Timer" type="Timer" parent="MarginContainer/VBoxContainer/timer" unique_id=1916004089]
-wait_time = 900.0
+wait_time = 700.0
 one_shot = true
 autostart = true
 
