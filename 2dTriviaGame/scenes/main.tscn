@@ -256,6 +256,7 @@ text = "Answer 2"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1567320782]
 stream = ExtResource("3_sugp2")
+volume_db = -14.857
 autoplay = true
 parameters/looping = true
 
