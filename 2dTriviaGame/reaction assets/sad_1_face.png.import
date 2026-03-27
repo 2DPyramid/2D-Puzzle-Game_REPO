@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckmb5g7atalgm"
-path="res://.godot/imported/sad_2_face.png-2ec7f4bc7b37a3d04dd6432de7d4c4b3.ctex"
+uid="uid://bmm2ek0446w3p"
+path="res://.godot/imported/sad_1_face.png-d11cca1a9e72998f3be57fac4fa80179.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sad_2_face.png"
-dest_files=["res://.godot/imported/sad_2_face.png-2ec7f4bc7b37a3d04dd6432de7d4c4b3.ctex"]
+source_file="res://reaction assets/sad_1_face.png"
+dest_files=["res://.godot/imported/sad_1_face.png-d11cca1a9e72998f3be57fac4fa80179.ctex"]
 
 [params]
 

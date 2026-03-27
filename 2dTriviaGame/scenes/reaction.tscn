@@ -67,4 +67,5 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1107030189]
 sprite_frames = SubResource("SpriteFrames_pei28")
-animation = &"4"
+animation = &"2"
+autoplay = "2"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckmb5g7atalgm"
-path="res://.godot/imported/sad_2_face.png-2ec7f4bc7b37a3d04dd6432de7d4c4b3.ctex"
+uid="uid://bd1nndqfaf2b6"
+path="res://.godot/imported/3.png-6bf789c5705958d164c2683300784df1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sad_2_face.png"
-dest_files=["res://.godot/imported/sad_2_face.png-2ec7f4bc7b37a3d04dd6432de7d4c4b3.ctex"]
+source_file="res://assets/thx for playing animation frames/lose/3.png"
+dest_files=["res://.godot/imported/3.png-6bf789c5705958d164c2683300784df1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckmb5g7atalgm"
-path="res://.godot/imported/sad_2_face.png-2ec7f4bc7b37a3d04dd6432de7d4c4b3.ctex"
+uid="uid://dgj5ocdlukf6i"
+path="res://.godot/imported/happy_2_face.png-da1bc07009ad197c98463058a8a299b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sad_2_face.png"
-dest_files=["res://.godot/imported/sad_2_face.png-2ec7f4bc7b37a3d04dd6432de7d4c4b3.ctex"]
+source_file="res://reaction assets/happy_2_face.png"
+dest_files=["res://.godot/imported/happy_2_face.png-da1bc07009ad197c98463058a8a299b7.ctex"]
 
 [params]
 
