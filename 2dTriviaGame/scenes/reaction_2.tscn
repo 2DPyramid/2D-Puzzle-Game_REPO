@@ -66,6 +66,7 @@ animations = [{
 }]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1954418145]
+scale = Vector2(0.74484944, 0.74484944)
 sprite_frames = SubResource("SpriteFrames_xlq24")
 animation = &"2"
 autoplay = "2"

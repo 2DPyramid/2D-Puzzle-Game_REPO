@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://byumjtlvnr7qs"]
+[gd_scene format=3 uid="uid://byumjtlvnr7qs"]
 
 [ext_resource type="Texture2D" uid="uid://ctayv2dajay8a" path="res://assets/thx for playing animation frames/lose/1.png" id="1_o5lv4"]
 [ext_resource type="Texture2D" uid="uid://boddbxy0g4orr" path="res://assets/thx for playing animation frames/lose/2.png" id="2_ee763"]
@@ -79,9 +79,10 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="end" type="Node2D"]
+[node name="end" type="Node2D" unique_id=734783646]
+visible = false
 
-[node name="lilguy" type="AnimatedSprite2D" parent="."]
+[node name="lilguy" type="AnimatedSprite2D" parent="." unique_id=1008681405]
 position = Vector2(589, 336)
 sprite_frames = SubResource("SpriteFrames_stj65")
 animation = &"LMAO"

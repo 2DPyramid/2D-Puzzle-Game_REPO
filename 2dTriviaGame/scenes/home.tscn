@@ -164,7 +164,7 @@ text = "opt2"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1247994092]
 stream = ExtResource("3_w18ys")
-volume_db = -5.0
+volume_db = -25.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt2" to="." method="_on_dialogue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/dialogue_opt1" to="." method="_on_dialogue_pressed"]

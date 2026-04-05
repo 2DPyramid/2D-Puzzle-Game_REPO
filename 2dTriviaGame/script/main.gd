@@ -31,6 +31,7 @@ func _ready():
 	time_left_to_live()
 	audio_stream_player.play()
 
+
 func _on_audio_stream_player_finished() -> void:
 	audio_stream_player.play()
 	
@@ -49,18 +50,28 @@ func update_ui():
 		ans_2.text = data["options"][1]
 	else:
 		#out of questions
-		question.text = "Out of Question"
-		score_label.text = "Percent Correct: "
+		question.text = "Out of Question\nCorrect Answers: " + str(int(correctAns)) + " out of " + str(Global.data.size())
+		score_label.text = "Percent correct of questions answered: "
 		score.text = str( int((correctAns / current) *100) )  + "%"
 		print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
 		print("Score: " + str(correctAns))
-		ans_1.hide()
-		ans_2.hide()
+		reaction.hide()
+		ans_1.text = "Again?"
+		ans_2.text = "Return to Start"
 		char_comments.hide()
+		end.show()
+		if correctAns / current * 100 > 70:
+				lilguy.play("YIPPEE")
+		else:
+				lilguy.play("LMAO")
 
 
 
 func _on_button_pressed(index: int) -> void:
+	
+	if ans_2.text == "Return to Start" or ans_2.text == "Again?":
+		get_tree().change_scene_to_file("res://scenes/title.tscn")
+		return
 	
 	if reaction_var == 10:
 		reaction.play("2")
@@ -101,7 +112,7 @@ func _on_button_pressed(index: int) -> void:
 	var random_index = randi() % comment_list.size()
 	var random_comm = comment_list[random_index]
 	char_comments.text = random_comm
-	#display random reaction sprite
+	#display random reaction comment
 	
 	
 	var correct = Global.data[current]["correct"]
@@ -150,14 +161,15 @@ func _process(_delta):
 	timer_label.text = "%02d:%02d" % time_left_to_live()
 	
 func _on_timer_timeout() -> void:
-	question.text = "Out of Time"
-	score_label.text = "Percent Correct: "
+	question.text = "Out of Time\nCorrect Answers: " + str(int(correctAns)) + " out of " + str(Global.data.size())
+	score_label.text = "Percent correct of questions answered: "
 	score.text = str( int((correctAns / current) *100) )  + "%"
 	print("Percent Correct out of total: " + str( int((correctAns / Global.data.size()) *100) )  + "%")
 	print("Score: " + str(correctAns))
-	ans_1.hide()
-	ans_2.hide()
 	reaction.hide()
+	ans_1.text = "Again?"
+	ans_2.text = "Return to Start"
+	char_comments.hide()
 	end.show()
 	if correctAns / current * 100 > 70:
 			lilguy.play("YIPPEE")
