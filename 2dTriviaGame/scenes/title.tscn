@@ -110,6 +110,19 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_b3w7a"]
+font_size = 36
+outline_color = Color(0.14901961, 0.14901961, 1, 1)
+shadow_size = 8
+
+[sub_resource type="SystemFont" id="SystemFont_b3w7a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4rr2b"]
+font = SubResource("SystemFont_b3w7a")
+font_size = 65
+outline_color = Color(0.14901961, 0.14901961, 1, 1)
+shadow_size = 8
+
 [node name="Title" type="Control" unique_id=676522004]
 layout_mode = 3
 anchors_preset = 0
@@ -162,8 +175,39 @@ label_settings = SubResource("LabelSettings_kpexm")
 horizontal_alignment = 1
 
 [node name="reaction_2" parent="." unique_id=1954418145 instance=ExtResource("3_pyl7j")]
-position = Vector2(162.00002, 528.00006)
+position = Vector2(136, 474)
 scale = Vector2(0.46875, 0.46875)
 sprite_frames = SubResource("SpriteFrames_4rr2b")
+
+[node name="Label2" type="Label" parent="." unique_id=1481050234]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 555.0
+offset_right = 1056.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("2_oyqm6")
+theme_override_font_sizes/font_size = 100
+text = "trivia game by Donghoon Yi, Fnu Mahira, Toby Tobias
+Spring Semester Game Design"
+label_settings = SubResource("LabelSettings_b3w7a")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1331710766]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 192.0
+offset_right = 1056.0
+offset_bottom = 292.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("2_oyqm6")
+theme_override_font_sizes/font_size = 100
+text = "2026"
+label_settings = SubResource("LabelSettings_4rr2b")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
