@@ -140,10 +140,10 @@ color = Color(0.09411765, 0.49803922, 1, 1)
 
 [node name="Button" type="Button" parent="." unique_id=243943183]
 layout_mode = 0
-offset_left = 372.0
-offset_top = 344.0
-offset_right = 716.0
-offset_bottom = 485.0
+offset_left = 407.0
+offset_top = 341.0
+offset_right = 751.0
+offset_bottom = 482.0
 scale = Vector2(0.9964068, 0.996219)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
